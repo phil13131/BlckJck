@@ -1,0 +1,65 @@
+<!--
+Author: Rishit Patel
+Date: Nov 27, 2019
+Description: BlackJack Game
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlackJack Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="gameArea">
+        <img src="blackjacklogo.png" alt="" id="logo">
+        <div id="buttons" class="buttons">
+            <input type="button" value="Play" id="playBtn" onclick="startGame()" class="btn">
+            <input type="button" value="Reset" id="resetBtn" onclick="reset()" class="btn" style="display: none;">
+            <input type="button" value="Hit" id="hitBtn" class="btn" onclick="hit()" style="display: none;">
+            <input type="button" value="Stand" id="standBtn" onclick="stand()" class="btn" style="display: none;">
+            <input type="button" value="Cheat" id="cheatBtn" onclick="cheat()" class="btn" style="display: none;">
+        </div>
+        <div id="instructions">
+            <h1>Rules:</h1>
+            <ul>
+                <li>All blackjack rules.</li>
+                <li>Game is played with infinite deck.</li>
+                <li>Maximum 5 cards can be drawn.</li>
+                <li>If you draw 5 cards without hitting 21 you win.</li>
+                <li>If you or PC get a joker before hitting 21 you win.</li>
+                <li>PC has to keep drawing cards until it's score is less than 17.</li>
+                <li>777 is a Jackpot!</li>
+            </ul>
+        </div>
+        <div class="cardsDiv" id="cardsDiv">
+            <div class="pcArea">
+                <h2 style="display: none;">Dealer</h2>
+                <div id="pcCards">
+                    <h1 id="pcScore" class="scores">0</h1>
+                </div>
+            </div>
+            <div class="playerArea">
+                <h2 style="display: none;">Player</h2>
+                <div id="plCards">
+                    <h1 id="playerScore" class="scores">0</h1>
+                </div>
+            </div>
+            <h2 id="result"></h2>
+        </div>
+    </div>
+    <div id="777" class="hideSSS">
+        <img src="https://media.giphy.com/media/pPzjpxJXa0pna/giphy.gif" alt="" style="padding-top: 3rem;">
+        <p><a href="https://giphy.com/gifs/pPzjpxJXa0pna" style="color: white; padding-top: 0.3rem;">via GIPHY</a></p>
+        <div id="sssCards"></div>
+        <h1 style="font-size: 51px; text-shadow: 2px 2px 2px rgb(0, 0, 0);">You won a Jackpot!!!</h1>
+        <input type="button" value="Replay" id="resetBtn" onclick="reset()" class="btn">
+    </div>
+</body>
+
+</html>
